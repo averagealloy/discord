@@ -8,4 +8,8 @@ client.once('ready', () => {
 
 // console.log(process.env);
 
+client.on('message', message => {
+	console.log(message.content);
+});
+
 client.login(process.env.TOKEN_KEY);
