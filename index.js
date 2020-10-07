@@ -9,7 +9,10 @@ client.once('ready', () => {
 // console.log(process.env);
 
 client.on('message', message => {
-	console.log(message.content);
+	// console.log(message.content);
+	if (message.content === '!ping') {
+		message.channel.send('Pong.');
+	}
 });
 
 client.login(process.env.TOKEN_KEY);
