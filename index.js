@@ -24,6 +24,9 @@ client.on('message', message => {
 	else if (message.content.startsWith(`${prefix}blam`)) {
 		message.channel.send('Cigarettes on cigarettes, my mama think I stank I got burn holes in my hoodies, all my homies think its dankI miss my cocoa');
 	}
+	else if (message.content === `${prefix}server`) {
+		message.channel.send(`This server's name is: ${message.guild.name}`);
+	}
 
 
 });
