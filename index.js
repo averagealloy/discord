@@ -1,4 +1,7 @@
 require('dotenv').config();
+// for token ^^^^^
+
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -9,9 +12,11 @@ client.once('ready', () => {
 // console.log(process.env);
 
 client.on('message', message => {
-	// console.log(message.content);
 	if (message.content === '!ping') {
 		message.channel.send('Pong.');
+	}
+	else if (message.content === '!boop') {
+		message.channel.send('Beep.');
 	}
 });
 
