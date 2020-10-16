@@ -11,11 +11,14 @@ client.once('ready', () => {
 
 // console.log(process.env);
 
+const prefix = '?';
+
+
 client.on('message', message => {
 	if (message.content === '!ping') {
 		message.channel.send('Pong.');
 	}
-	else if (message.content === '!boop') {
+	else if (message.content === `${prefix}boop`) {
 		message.channel.send('Beep.');
 	}
 });
