@@ -22,10 +22,14 @@ client.on('message', message => {
 		message.channel.send('Beep.');
 	}
 	else if (message.content.startsWith(`${prefix}blam`)) {
-		message.channel.send('Cigarettes on cigarettes, my mama think I stank I got burn holes in my hoodies, all my homies think its dankI miss my cocoa');
+		message.channel.send('Cigarettes on cigarettes, my mama think I stank I got burn holes in my hoodies, all my homies think its dank I miss my cocoa');
 	}
 	else if (message.content === `${prefix}server`) {
 		message.channel.send(`This server's name is: ${message.guild.name}`);
+	}
+	// eslint-disable-next-line no-dupe-else-if
+	else if (message.content === `${prefix}server total`) {
+		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
 	}
 
 
