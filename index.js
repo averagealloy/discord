@@ -17,10 +17,9 @@ const prefix = '!';
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-const args = message.content.slice(prefix.length).trim().split(' ');
-const command = args.shift().toLowerCase();
-	
-	/* 
+	const args = message.content.slice(prefix.length).trim().split(' ');
+	const command = args.shift().toLowerCase();
+	/*
 	if (message.content === '!ping') {
 		message.channel.send('Pong.');
 	}
@@ -41,11 +40,15 @@ const command = args.shift().toLowerCase();
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
 	}
 	*/
-	
-	
+	//else 
+	if (command === 'args-info') {
+		if (!args.length) {
+			return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
+		}
+
+		message.channel.send(`Command name: ${command}\nArguments: ${args}`);
+	}
 });
-
-
 
 
 client.login(process.env.TOKEN_KEY);
