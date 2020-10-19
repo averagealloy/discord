@@ -15,6 +15,12 @@ const prefix = '!';
 
 
 client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).trim().split(' ');
+const command = args.shift().toLowerCase();
+	
+	/* 
 	if (message.content === '!ping') {
 		message.channel.send('Pong.');
 	}
@@ -34,8 +40,12 @@ client.on('message', message => {
 	else if (message.content === `${prefix}user-info`) {
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
 	}
-
-
+	*/
+	
+	
 });
+
+
+
 
 client.login(process.env.TOKEN_KEY);
