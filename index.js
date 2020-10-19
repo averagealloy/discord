@@ -31,6 +31,9 @@ client.on('message', message => {
 	else if (message.content === `${prefix}server total`) {
 		message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
 	}
+	else if (message.content === `${prefix}user-info`) {
+		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
+	}
 
 
 });
