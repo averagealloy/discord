@@ -40,7 +40,7 @@ client.on('message', message => {
 		message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}`);
 	}
 	*/
-	//else 
+	// else
 	if (command === 'args-info') {
 		if (!args.length) {
 			return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
@@ -49,8 +49,8 @@ client.on('message', message => {
 			return message.channel.send('bar');
 		}
 
-
-		message.channel.send(`Command name: ${command}\nArguments: ${args}`);
+		message.channel.send(`First argument: ${args[0]}`);
+		// message.channel.send(`Command name: ${command}\nArguments: ${args}`);
 	}
 });
 
